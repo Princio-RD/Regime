@@ -1,0 +1,535 @@
+ERROR - 2026-05-07 06:21:41 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:21:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-07 06:22:14 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:22:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 06:24:44 --> ParseError: syntax error, unexpected end of file
+[Method: POST, Route: login]
+in APPPATH\Config\Routes.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 06:24:45 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-07 06:25:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:25:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-07 06:25:31 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:25:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-07 06:26:04 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:26:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-07 06:33:53 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:33:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-07 06:34:07 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'regime' in D:\Rojo\Poids\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Rojo\Poids\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\Rojo\Poids\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Rojo\Poids\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\Rojo\Poids\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Rojo\Poids\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\Rojo\Poids\app\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+#6 D:\Rojo\Poids\system\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+#7 D:\Rojo\Poids\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 D:\Rojo\Poids\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\Rojo\Poids\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 D:\Rojo\Poids\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 D:\Rojo\Poids\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-05-07 06:34:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'regime'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 06:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 06:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 06:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 06:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-07 06:37:37 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: register]
+in APPPATH\Controllers\AuthentificationControllers.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists()
+ 5 SYSTEMPATH\Router\Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 06:37:38 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH\Controllers\AuthentificationControllers.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists()
+ 5 SYSTEMPATH\Router\Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 06:37:39 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH\Controllers\AuthentificationControllers.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists()
+ 5 SYSTEMPATH\Router\Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 06:37:41 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: register]
+in APPPATH\Controllers\AuthentificationControllers.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists()
+ 5 SYSTEMPATH\Router\Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 06:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 06:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 06:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 06:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 07:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 08:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 08:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 08:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 08:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 09:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 11:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-07 16:30:05 --> Duplicate entry 'Vero@gmail.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(355): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(668): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\AuthentificationControllers.php(58): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveUser()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 16:30:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'Vero@gmail.com' for key 'email'
+[Method: POST, Route: save-user]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(355): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(668): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\AuthentificationControllers.php(58): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveUser()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 16:30:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'Vero@gmail.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(355): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(668): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\AuthentificationControllers.php(58): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveUser()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-07 16:30:05 --> [Caused by] mysqli_sql_exception: Duplicate entry 'Vero@gmail.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(355): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(668): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\AuthentificationControllers.php(58): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveUser()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 16:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-07 16:31:16 --> Error: Class "App\Model\SanteModel" not found
+[Method: POST, Route: save-sante]
+in APPPATH\Controllers\AuthentificationControllers.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveSante()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 16:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-07 16:37:33 --> Error: Class "App\Model\SanteModel" not found
+[Method: POST, Route: save-sante]
+in APPPATH\Controllers\AuthentificationControllers.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveSante()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 16:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-07 16:37:41 --> Error: Class "App\Model\SanteModel" not found
+[Method: POST, Route: save-sante]
+in APPPATH\Controllers\AuthentificationControllers.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveSante()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 16:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-07 16:41:09 --> Error: Class "App\Model\SanteModel" not found
+[Method: POST, Route: save-sante]
+in APPPATH\Controllers\AuthentificationControllers.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthentificationControllers->saveSante()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-07 16:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 16:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 16:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 16:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-07 16:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
