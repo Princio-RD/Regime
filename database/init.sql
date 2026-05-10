@@ -1,4 +1,5 @@
-create database Alimentaire;
+drop database if exists Alimentaire;
+create database if not exists Alimentaire;
 use alimentaire;
 
 
