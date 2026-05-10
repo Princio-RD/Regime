@@ -44,6 +44,30 @@
                         </div>
                         <button type="submit" class="btn btn-block">Recharger maintenant</button>
                     </form>
+
+                    <?php if (!empty($codesDisponibles)): ?>
+                        <div class="mt-4">
+                            <h3>Codes de recharge disponibles</h3>
+                            <table class="w-full">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left py-2">Code</th>
+                                        <th class="text-left py-2">Montant (Ar)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($codesDisponibles as $code): ?>
+                                        <tr class="border-t">
+                                            <td class="py-2"><?= htmlspecialchars($code['code']) ?></td>
+                                            <td class="py-2"><?= number_format($code['montant'], 0, ',', ' ') ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    <?php else: ?>
+                        <p class="mt-4 text-center text-muted">Aucun code de recharge disponible pour le moment.</p>
+                    <?php endif; ?>
                 </div>
 
                 <p class="mt-4 text-center">

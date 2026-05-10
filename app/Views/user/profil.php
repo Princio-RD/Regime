@@ -42,6 +42,49 @@
                 </div>
             </section>
 
+               <section class="card mt-4">
+                <h2>🎯 Mes Objectifs</h2>
+                <?php if (!empty($userObjectifs)): ?>
+                    <div class="objectifs-list">
+                        <?php foreach ($userObjectifs as $obj): ?>
+                            <div class="objectif-item">
+                                <h3><?= esc($obj['objectif_nom']) ?></h3>
+                                <p class="meta">
+                                    Choisi le : <?= date('d/m/Y', strtotime($obj['date_choix'])) ?>
+                                </p>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else: ?>
+                    <p>Aucun objectif choisi pour le moment.</p>
+                <?php endif; ?>
+            </section>
+
+            
+            <section class="card mt-4">
+                <h2>🥗 Mes Régimes Achetés</h2>
+                <?php if (!empty($userRegimes)): ?>
+                    <div class="regimes-list">
+                        <?php foreach ($userRegimes as $regime): ?>
+                            <div class="regime-item">
+                                <h3><?= esc($regime['regime_nom']) ?></h3>
+                                <p><?= esc($regime['description']) ?></p>
+                                <div class="meta">
+                                    <span>📅 Du : <?= date('d/m/Y', strtotime($regime['date_debut'])) ?></span>
+                                    <span> au : <?= date('d/m/Y', strtotime($regime['date_fin'])) ?></span>
+                                </div>
+                                <div class="meta">
+                                    <span>💰 Prix payé : <?= number_format($regime['prix_total'], 0, ',', ' ') ?> Ar</span>
+                                    <span>📊 Statut : <?= esc($regime['statut']) ?></span>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else: ?>
+                    <p>Aucun régime acheté pour le moment.</p>
+                <?php endif; ?>
+            </section>
+
             <section class="card update-account mt-4">
                 <h2>Mise à jour des informations du compte</h2>
                 
@@ -56,6 +99,7 @@
                     </div>
                 <?php endif; ?>
 
+                
                 <form action="/update-account" method="post">
                     <?= csrf_field() ?>
                     <div class="field">
@@ -77,7 +121,7 @@
                     <button type="submit" class="btn">Mettre à jour mon compte</button>
                 </form>
             </section>
-
+                    
             <section class="card update-health mt-4">
                 <h2>Mise à jour des données de santé</h2>
                 
@@ -109,6 +153,7 @@
                     <button type="submit" class="btn">Mettre à jour mon IMC</button>
                 </form>
             </section>
+
 
             <p class="mt-4">
                 <a class="link" href="/Accueil">Retour à l'accueil</a>
