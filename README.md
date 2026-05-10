@@ -1,2 +1,0 @@
-# Regime
-examen S4
