@@ -143,7 +143,7 @@ INSERT INTO users (nom, email, mot_de_passe, genre, porte_monnaie, is_gold, date
 ('Marie Martin', 'marie.martin@gmail.com', '$2y$10$YourHashedPasswordHere2', 'Femme', 250.50, TRUE, '1988-12-20', 'USER'),
 ('Pierre Durand', 'pierre.durand@gmail.com', '$2y$10$YourHashedPasswordHere3', 'Homme', 75.30, FALSE, '1995-03-10', 'USER'),
 ('Sophie Bernard', 'sophie.bernard@gmail.com', '$2y$10$YourHashedPasswordHere4', 'Femme', 320.00, TRUE, '1992-07-25', 'USER'),
-('Admin System', 'admin@alimentaire.com', '$2y$10$AdminHashHere', 'Homme', 0.00, FALSE, '1985-01-01', 'ADMIN');
+('Admin System', 'admin@alimentaire.com', '$2y$10$AdminHashHere', 'Homme', 0.00, FALSE, '1985-01-01', 'ADMIN'); -- password: admin123
 
 -- 3. INSERTION DES DONNÉES DE SANTÉ
 INSERT INTO sante (user_id, taille, poids, imc) VALUES
