@@ -125,20 +125,6 @@ CREATE TABLE abonnement_gold (
         ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-INSERT INTO objectif(nom) VALUES
-('Augmenter son poids'),
-('Reduire son poids'),
-('Atteindre IMC ideal');
-
-INSERT INTO users (nom, email, mot_de_passe, genre, date_de_naissance)
-VALUES
-('Jean', 'jean@gmail.com', '$2y$10$abc123hash', 'Homme', '2000-05-10'),
-('Marie', 'marie@gmail.com', '$2y$10$xyz456hash', 'Femme', '1998-11-22');
-
-INSERT INTO sante (user_id, taille, poids)
-VALUES
-(1, 1.75, 70),
-(2, 1.65, 55);
 
 -- =====================================================
 -- INSERTION DES DONNÉES DE TEST
