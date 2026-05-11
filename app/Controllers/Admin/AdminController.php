@@ -26,7 +26,7 @@ class AdminController extends BaseController
         $user = $model->where('email', $email)->first();
 
         $role = isset($user['role']) ? strtoupper($user['role']) : '';
-        $isAdmin = ($user && ((isset($user['is_admin']) && $user['is_admin'] == 1) || $role === 'ADMIN'));
+        $isAdmin = ($role === 'ADMIN');
 
         if ($user && $password === $user['mot_de_passe'] && $isAdmin) {
             session()->set('admin_id', $user['id']);
