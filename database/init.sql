@@ -126,18 +126,13 @@ CREATE TABLE abonnement_gold (
 ) ENGINE=InnoDB;
 
 
--- =====================================================
--- INSERTION DES DONNÉES DE TEST
--- Projet Alimentaire - Régimes et objectifs
--- =====================================================
 
--- 1. INSERTION DES OBJECTIFS (déjà existants)
 INSERT INTO objectif(nom) VALUES
 ('Augmenter son poids'),
 ('Reduire son poids'),
 ('Atteindre IMC ideal');
 
--- 2. INSERTION DES UTILISATEURS (5 utilisateurs)
+
 INSERT INTO users (nom, email, mot_de_passe, genre, porte_monnaie, is_gold, date_de_naissance, role) VALUES
 ('Jean Dupont', 'jean.dupont@gmail.com', 'password123', 'Homme', 150.00, FALSE, '1990-05-15', 'USER'),
 ('Marie Martin', 'marie.martin@gmail.com', 'password123', 'Femme', 250.50, TRUE, '1988-12-20', 'USER'),
@@ -145,7 +140,7 @@ INSERT INTO users (nom, email, mot_de_passe, genre, porte_monnaie, is_gold, date
 ('Sophie Bernard', 'sophie.bernard@gmail.com', 'password123', 'Femme', 320.00, TRUE, '1992-07-25', 'USER'),
 ('Admin System', 'admin@alimentaire.com', 'admin123', 'Homme', 0.00, FALSE, '1985-01-01', 'ADMIN');
 
--- 3. INSERTION DES DONNÉES DE SANTÉ
+
 INSERT INTO sante (user_id, taille, poids, imc) VALUES
 (1, 1.75, 85.5, 27.92),  -- Jean - Surpoids
 (2, 1.65, 52.0, 19.10),  -- Marie - Poids normal
@@ -153,7 +148,6 @@ INSERT INTO sante (user_id, taille, poids, imc) VALUES
 (4, 1.70, 48.0, 16.61),  -- Sophie - Maigreur
 (5, 1.72, 70.0, 23.66);  -- Admin - Poids normal
 
--- 4. INSERTION DES OBJECTIFS UTILISATEURS
 INSERT INTO user_objectif (user_id, objectif_id, date_choix) VALUES
 (1, 2, '2026-05-01 10:00:00'),  -- Jean veut réduire son poids
 (2, 3, '2026-05-02 14:30:00'),  -- Marie veut IMC idéal
@@ -161,7 +155,7 @@ INSERT INTO user_objectif (user_id, objectif_id, date_choix) VALUES
 (4, 1, '2026-05-04 16:45:00'),  -- Sophie veut augmenter son poids
 (5, 3, '2026-05-05 11:20:00');  -- Admin veut IMC idéal
 
--- 5. INSERTION DES ACTIVITÉS SPORTIVES (5 activités)
+
 INSERT INTO activites_sportives (nom, description, calories_brulees, duree_minute) VALUES
 ('Marche rapide', 'Marche à allure soutenue, idéale pour débuter', 250, 60),
 ('Course à pied', 'Running à intensité modérée', 500, 45),
@@ -169,7 +163,7 @@ INSERT INTO activites_sportives (nom, description, calories_brulees, duree_minut
 ('Vélo', 'Cyclisme à allure modérée', 350, 60),
 ('Musculation', 'Séance complète avec poids', 300, 50);
 
--- 6. INSERTION DES RÉGIMES (5 régimes)
+-- 6. INSERTION DES RÉGIMES
 INSERT INTO regimes (nom, description, prix, duree_jour, variation_poids, pourcentage_viande, pourcentage_poisson, pourcentage_volaille) VALUES
 ('Régime Protéiné', 'Régime riche en protéines pour prise de muscle', 199.99, 30, 3.50, 40.00, 30.00, 30.00),
 ('Régime Hypocalorique', 'Pour perdre du poids efficacement', 149.99, 21, -5.00, 25.00, 35.00, 40.00),
@@ -190,7 +184,7 @@ INSERT INTO regime_sport (regime_id, sport_id) VALUES
 (5, 3),  -- Régime Détox + Natation
 (5, 1);  -- Régime Détox + Marche
 
--- 8. INSERTION DES CODES PORTE-MONNAIE (15 codes)
+-- 8. INSERTION DES CODES PORTE-MONNAIE 
 INSERT INTO codes_portefeuille (code, montant, utilise) VALUES
 ('GIFT2024-001', 50.00, FALSE),
 ('GIFT2024-002', 100.00, FALSE),
