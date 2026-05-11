@@ -641,3 +641,154 @@ body {
         aspect-ratio: 16 / 9;
     }
 }
+
+/* =====================
+   LISTES & PAGES INTERNES (objectif / profil / wallet)
+   ===================== */
+.objectif-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.objectif-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255,255,255,0.88);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: 1.25rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.objectif-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px 220px at 20% 0%, rgba(157, 187, 108, 0.20), transparent 60%);
+    pointer-events: none;
+}
+
+.objectif-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(47, 111, 78, 0.28);
+}
+
+.objectif-item h3 {
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+}
+
+.objectif-item p {
+    color: var(--text-secondary);
+}
+
+/* Cards génériques (utilisées par profil/wallet) */
+.card {
+    background: rgba(255,255,255,0.88);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+}
+
+/* Listes dans Profil */
+.objectifs-list,
+.regimes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 0.85rem;
+}
+
+.regime-item,
+.objectifs-list .objectif-item {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: 1.1rem 1.2rem;
+}
+
+.regime-item h3,
+.objectifs-list .objectif-item h3 {
+    font-size: 1.05rem;
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+}
+
+.regime-item p { color: var(--text-secondary); }
+
+.meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Formulaires dans Profil */
+.update-account .field,
+.update-health .field {
+    margin-bottom: 0.9rem;
+}
+
+.update-account label,
+.update-health label {
+    display: block;
+    font-weight: 800;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+    font-size: 0.92rem;
+}
+
+.update-account input,
+.update-health input {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: #fff;
+    outline: none;
+    transition: var(--transition);
+}
+
+.update-account input:focus,
+.update-health input:focus {
+    border-color: rgba(47, 111, 78, 0.45);
+    box-shadow: 0 0 0 4px rgba(47, 111, 78, 0.12);
+}
+
+/* Tableaux (codes wallet) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem 0.55rem;
+    border-bottom: 1px solid rgba(16, 42, 29, 0.10);
+}
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}

@@ -11,7 +11,7 @@
     <main class="auth">
         <div class="auth-layout fade-in">
             <section class="auth-media" aria-hidden="true">
-                <img src="/assets/img/Chud Tsankov.jpg" alt="Illustration nutrition">
+                <img src="/assets/img/2.jpg" alt="Illustration nutrition">
                 <div class="auth-media-content">
                     <h3>Mangez mieux, vivez mieux</h3>
                     <p>Des programmes nutrition + sport adaptés à vos objectifs.</p>
