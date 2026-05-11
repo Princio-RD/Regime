@@ -485,4 +485,52 @@ class UserController extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+
+    public function exportRegimePdf($regimeId)
+    {
+        $userId = session()->get('user_id');
+        if (!$userId) {
+            return redirect()->to('/');
+        }
+
+        // Dompdf est requis (composer require dompdf/dompdf)
+        if (!class_exists('Dompdf\\Dompdf')) {
+            return $this->response
+                ->setStatusCode(500)
+                ->setBody("Export PDF indisponible : la librairie Dompdf n'est pas installée. Installez-la avec Composer (dompdf/dompdf). ");
+        }
+
+        $regimeModel = new RegimeModel();
+        $regimeSportModel = new RegimeSportModel();
+
+        $regime = $regimeModel->find((int) $regimeId);
+        if (!$regime) {
+            return $this->response->setStatusCode(404)->setBody('Régime introuvable.');
+        }
+
+        $sports = $regimeSportModel
+            ->select('activites_sportives.*')
+            ->join('activites_sportives', 'activites_sportives.id = regime_sport.sport_id')
+            ->where('regime_sport.regime_id', (int) $regimeId)
+            ->findAll();
+
+        $html = view('user/regime_pdf', [
+            'regime' => $regime,
+            'sports' => $sports,
+        ]);
+
+        $dompdf = new \Dompdf\Dompdf([
+            'isRemoteEnabled' => true,
+        ]);
+        $dompdf->loadHtml($html, 'UTF-8');
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+
+        $filename = 'regime_' . ($regime['id'] ?? $regimeId) . '.pdf';
+
+        return $this->response
+            ->setHeader('Content-Type', 'application/pdf')
+            ->setHeader('Content-Disposition', 'attachment; filename="' . $filename . '"')
+            ->setBody($dompdf->output());
+    }
 }
