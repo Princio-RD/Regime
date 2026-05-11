@@ -84,6 +84,10 @@
                 <?php endif; ?>
 
                 <p class="mt-4 text-center">
+                    <a href="/regimes/export-pdf" class="btn">Exporter en PDF</a>
+                </p>
+
+                <p class="mt-4 text-center">
                     <a href="/Accueil" class="link">Retour au tableau de bord</a>
                 </p>
             </section>
