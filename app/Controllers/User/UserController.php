@@ -493,11 +493,20 @@ class UserController extends BaseController
             return redirect()->to('/');
         }
 
-        // Dompdf est requis (composer require dompdf/dompdf)
+        // Chargement Dompdf depuis une librairie externe locale (sans Composer)
+        // Dompdf n'embarque pas toujours "autoload.inc.php" : il provient du projet dompdf/utils.
+        if (!class_exists('Dompdf\\Dompdf')) {
+            $dompdfAutoload = APPPATH . 'ThirdParty/dompdf-utils/autoload.inc.php';
+            if (is_file($dompdfAutoload)) {
+                require_once $dompdfAutoload;
+            }
+        }
+
+        // Dompdf est requis (composer require dompdf/dompdf) ou via app/ThirdParty/dompdf + app/ThirdParty/dompdf-utils
         if (!class_exists('Dompdf\\Dompdf')) {
             return $this->response
                 ->setStatusCode(500)
-                ->setBody("Export PDF indisponible : la librairie Dompdf n'est pas installée. Installez-la avec Composer (dompdf/dompdf). ");
+                ->setBody("Export PDF indisponible : la librairie Dompdf n'est pas installée. Installez-la avec Composer (dompdf/dompdf) ou placez Dompdf dans app/ThirdParty/dompdf et l'autoloader (dompdf/utils) dans app/ThirdParty/dompdf-utils/autoload.inc.php.");
         }
 
         $regimeModel = new RegimeModel();
@@ -528,8 +537,10 @@ class UserController extends BaseController
 
         $filename = 'regime_' . ($regime['id'] ?? $regimeId) . '.pdf';
 
+       
         return $this->response
             ->setHeader('Content-Type', 'application/pdf')
+            ->setHeader('X-Content-Type-Options', 'nosniff')
             ->setHeader('Content-Disposition', 'attachment; filename="' . $filename . '"')
             ->setBody($dompdf->output());
     }
