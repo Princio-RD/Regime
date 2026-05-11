@@ -264,13 +264,17 @@ body {
 
 /* Links */
 .link {
+    font-weight: 800;
     color: var(--primary);
     text-decoration: none;
-    font-weight: 700;
+    border-bottom: 1px dashed rgba(47, 111, 78, 0.35);
+    padding-bottom: 2px;
+    transition: var(--transition);
 }
 
 .link:hover {
-    text-decoration: underline;
+    color: var(--primary-dark);
+    border-bottom-color: rgba(47, 111, 78, 0.75);
 }
 
 /* Forms */
@@ -547,6 +551,33 @@ body {
     .dash-hero-media { min-height: 240px; }
 }
 
+/* =====================
+   Régimes : affichage côte à côte
+   ===================== */
+.regime-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+    margin-top: 1.25rem;
+}
+
+.regime-card {
+    height: 100%;
+}
+
+@media (min-width: 1100px) {
+    .regime-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1450px) {
+    .regime-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -791,4 +822,187 @@ th {
     letter-spacing: 0.06em;
     font-size: 0.75rem;
     color: var(--text-muted);
+}
+
+/* =====================
+   PIMP LÉGER UI (profil / objectif / programmes)
+   ===================== */
+
+/* Lien déconnexion (topbar) */
+.logout {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 9999px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--primary-dark);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(47, 111, 78, 0.18);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.logout:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(47, 111, 78, 0.35);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+/* Liens type "link" plus propres */
+.link {
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(47, 111, 78, 0.35);
+    padding-bottom: 2px;
+    transition: var(--transition);
+}
+
+.link:hover {
+    color: var(--primary-dark);
+    border-bottom-color: rgba(47, 111, 78, 0.75);
+}
+
+/* Cards génériques : fond + liseré + highlight */
+.card,
+.hero,
+.topbar {
+    position: relative;
+}
+
+.card::before,
+.hero::before,
+.topbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(800px 320px at 15% 0%, rgba(157, 187, 108, 0.14), transparent 55%);
+    pointer-events: none;
+}
+
+/* Boutons : un peu plus premium */
+.btn {
+    border: 0;
+    cursor: pointer;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    box-shadow: 0 14px 30px rgba(36, 87, 61, 0.18);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 44px rgba(36, 87, 61, 0.22);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 24px rgba(36, 87, 61, 0.18);
+}
+
+/* Programmes : carte plus travaillée */
+.regime-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: 1.35rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.regime-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(700px 260px at 22% 0%, rgba(47, 111, 78, 0.10), transparent 60%);
+    pointer-events: none;
+}
+
+.regime-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(47, 111, 78, 0.28);
+}
+
+.regime-card h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.35rem;
+}
+
+.regime-card p {
+    color: var(--text-secondary);
+}
+
+.composition {
+    margin-top: 0.85rem;
+    padding: 0.85rem 0.95rem;
+    background: rgba(242, 245, 242, 0.75);
+    border: 1px solid rgba(16, 42, 29, 0.08);
+    border-radius: 14px;
+}
+
+.sports-box {
+    margin-top: 0.85rem;
+    padding: 0.95rem;
+    border-radius: 14px;
+    border: 1px solid rgba(16, 42, 29, 0.10);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.sports-box h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+    color: var(--text-primary);
+}
+
+.sports-box ul {
+    padding-left: 1.05rem;
+}
+
+.price-tag {
+    margin-top: 0.9rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: baseline;
+    font-weight: 950;
+    color: var(--primary-dark);
+}
+
+.price-old {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-weight: 800;
+}
+
+/* KPIs du profil : légèrement plus "cards" */
+.kpi {
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(520px 220px at 20% 0%, rgba(242, 178, 74, 0.10), transparent 55%);
+    pointer-events: none;
+}
+
+/* Responsive : aligner les actions topbar sur mobile */
+@media (max-width: 640px) {
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .logout {
+        width: 100%;
+        justify-content: center;
+    }
 }
