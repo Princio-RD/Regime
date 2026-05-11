@@ -19,6 +19,8 @@ $routes->get('/profil', 'User\UserController::profil');
 $routes->get('/Accueil', 'User\UserController::Accueil');
 $routes->get('/objectif', 'User\UserController::getObjectif');
 $routes->get('/objectifs/(:num)', 'User\UserController::ObjectifChoisie/$1');
+// Export PDF for an objectif (list of regimes)
+$routes->get('/objectifs/(:num)/export-pdf', 'User\UserController::exportObjectifPdf/$1');
 $routes->post('/update-profil', 'User\UserController::updateProfil');
 $routes->post('/update-account', 'User\UserController::updateAccount');
 

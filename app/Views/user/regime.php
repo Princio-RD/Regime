@@ -19,7 +19,12 @@
                             <p>Cible poids idéal : <strong><?= $poids_ideal ?> kg</strong></p>
                         <?php endif; ?>
                     </div>
-                    <a href="/objectif" class="link">Changer d'objectif</a>
+                    <div style="display:flex; gap:10px; align-items:center;">
+                        <?php if (isset($Idobjectif)): ?>
+                            <a href="/objectifs/<?= esc($Idobjectif) ?>/export-pdf" class="btn">Exporter l'objectif en PDF</a>
+                        <?php endif; ?>
+                        <a href="/objectif" class="link">Changer d'objectif</a>
+                    </div>
                 </div>
 
                 <?php if (isset($regimes) && !empty($regimes)): ?>

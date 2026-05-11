@@ -13,6 +13,8 @@ use App\Models\CodePortefeuilleModel;
 use App\Models\RechargePortefeuilleModel;
 use App\Models\AbonnementGoldModel;
 use App\Models\UserRegimeModel;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class UserController extends BaseController
 {
@@ -330,6 +332,70 @@ class UserController extends BaseController
 
         return view('user/regime', $data);
     }
+
+    /**
+     * Export the objective page (list of recommended regimes) as PDF
+     */
+    public function exportObjectifPdf($id)
+    {
+        $userId = session()->get('user_id');
+        if (!$userId) return redirect()->to('/');
+
+        $regimeModel = new RegimeModel();
+        $objectifModel = new ObjectifModel();
+        $regimeSportModel = new RegimeSportModel();
+        $userModel = new UserModel();
+        $santeModel = new SanteModel();
+
+        $user = $userModel->find($userId);
+        $sante = $santeModel->where('user_id', $userId)->orderBy('id', 'DESC')->first();
+
+        $data['objectif'] = $objectifModel->find($id);
+        $data['is_gold'] = (isset($user['is_gold']) && $user['is_gold'] == 1);
+
+        if ($id == 1) {
+            $query = $regimeModel->where('variation_poids >', 0);
+        } else if ($id == 2) {
+            $query = $regimeModel->where('variation_poids <', 0);
+        } else if ($id == 3 && $sante) {
+            $tailleM = $sante['taille'] / 100;
+            $poidsIdeal = 22 * ($tailleM * $tailleM);
+            $data['poids_ideal'] = round($poidsIdeal, 1);
+
+            $condition = ($poidsIdeal > $sante['poids']) ? 'variation_poids >' : 'variation_poids <';
+            $query = $regimeModel->where($condition, 0);
+        } else {
+            $query = $regimeModel;
+        }
+
+        $regimes = $query->findAll();
+
+        foreach ($regimes as &$regime) {
+            $regime['sports'] = $regimeSportModel
+                ->select('activites_sportives.*')
+                ->join('activites_sportives', 'activites_sportives.id = regime_sport.sport_id')
+                ->where('regime_sport.regime_id', $regime['id'])
+                ->findAll();
+        }
+
+        $data['regimes'] = $regimes;
+
+        // Render view to HTML
+        $html = view('user/pdf/objectif_pdf', $data);
+
+        // Setup Dompdf
+        $options = new Options();
+        $options->set('isRemoteEnabled', true);
+        $dompdf = new Dompdf($options);
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+
+        // Stream the PDF to browser
+        return $dompdf->stream('objectif_' . ($id ?? 'export') . '.pdf', ["Attachment" => 1]);
+    }
+
+    
 
     public function viewPorteMonnaie()
     {
