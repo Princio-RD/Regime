@@ -8,34 +8,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="auth">
-        <section class="auth-card fade-in">
-            <h2 class="auth-title">NutriPlan Admin</h2>
-            <p class="auth-sub">Accédez au back-office</p>
-
-            <?php if (session()->getFlashdata('Error')): ?>
-                <div class="alert alert-error">
-                    <?= esc((string) session()->getFlashdata('Error')) ?>
+    <main class="auth admin-auth">
+        <div class="auth-layout fade-in">
+            <section class="auth-media" aria-hidden="true">
+                <img src="/assets/img/login-side.svg" alt="Illustration administration NutriPlan">
+                <div class="auth-media-content">
+                    <div class="auth-admin-badge">Accès sécurisé - Administration</div>
+                    <h3>Console d'administration</h3>
+                    <p>Gérez les utilisateurs, les régimes, les codes et les statistiques depuis un espace sécurisé.</p>
+                    <p class="auth-admin-note">Accès réservé à l'équipe NutriPlan. Connectez-vous pour superviser la plateforme et garder un suivi clair des opérations.</p>
                 </div>
-            <?php endif; ?>
+            </section>
 
-            <form method="post" action="/doLoginAdmin">
-                <?= csrf_field() ?>
+            <section class="auth-card">
+                <h2 class="auth-title">NutriPlan Admin</h2>
+                <p class="auth-sub">Connectez-vous pour accéder au back-office et piloter la plateforme.</p>
 
-                <div class="field">
-                    <input type="email" name="email" placeholder="Email administrateur" required>
+                <?php if (session()->getFlashdata('Error')): ?>
+                    <div class="alert alert-error">
+                        <?= esc((string) session()->getFlashdata('Error')) ?>
+                    </div>
+                <?php endif; ?>
+
+                <form method="post" action="/doLoginAdmin">
+                    <?= csrf_field() ?>
+
+                    <div class="field" style="margin-bottom: 0.75rem;">
+                        <input type="email" name="email" placeholder="Email administrateur" required>
+                    </div>
+                    <div class="field" style="margin-bottom: 1rem;">
+                        <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+                    </div>
+
+                    <button class="btn btn-block" type="submit">Se connecter</button>
+                </form>
+
+                <div class="text-center mt-3">
+                    <a class="link" href="/">Retour au site public</a>
                 </div>
-                <div class="field">
-                    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
-                </div>
-
-                <button class="btn btn-block" type="submit">Se connecter</button>
-            </form>
-
-            <div class="text-center mt-3">
-                <a class="link" href="/">Retour au site</a>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 </body>
 </html>
