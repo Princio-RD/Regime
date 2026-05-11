@@ -28,9 +28,7 @@
                         <p><?= $niveau ?></p>
                     </div>
 
-                    <a class="logout" href="/logout" aria-label="Déconnexion">
-                        Déconnexion
-                    </a>
+                    <a class="logout" href="/logout" aria-label="Déconnexion">Déconnexion</a>
                 </div>
 
                 <?php if (session()->getFlashdata('success')): ?>
@@ -44,52 +42,71 @@
                     </div>
                 <?php endif; ?>
 
-                <div class="kpis">
-                    <div class="kpi">
-                        <p class="label">Votre IMC</p>
-                        <p class="value"><?= esc($imcValue) ?></p>
-                        <p class="sub">Indice de masse corporelle</p>
+                <div class="dash-hero">
+                    <div class="dash-hero-card">
+                        <h2>Votre menu santé du jour</h2>
+                        <p>
+                            Suivez vos indicateurs, choisissez votre objectif et lancez un programme comme dans un
+                            restaurant : simple, clair, et prêt à servir.
+                        </p>
+                        <div class="dash-hero-actions">
+                            <a class="btn" href="/objectif">Choisir un programme</a>
+                            <a class="btn btn-secondary" href="/profil">Compléter mon profil</a>
+                        </div>
                     </div>
-                    <div class="kpi">
-                        <p class="label">Poids actuel</p>
-                        <p class="value"><?= esc($poidsValue) ?><?= $poidsValue !== '--' ? ' kg' : '' ?></p>
-                        <p class="sub">Dernière mesure</p>
-                    </div>
-                    <div class="kpi">
-                        <p class="label">Porte-monnaie</p>
-                        <p class="value"><?= esc($soldeValue) ?> Ar</p>
-                        <p class="sub">Crédit disponible</p>
+
+                    <div class="dash-hero-media" aria-hidden="true">
+                        <img src="/assets/img/1.jpg" alt="Illustration repas sain">
                     </div>
                 </div>
 
-                <div class="actions">
-                    <a class="action" href="/profil">
-                        <span>
-                            <p class="title">Mon Profil</p>
-                            <p class="desc">Compléter les infos</p>
-                        </span>
+                <h3 class="section-title">Vos indicateurs</h3>
+                <div class="cards-grid">
+                    <div class="card-soft">
+                        <div class="card-title">IMC</div>
+                        <div class="card-desc">Indice de masse corporelle</div>
+                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 0.25rem;">
+                            <?= esc($imcValue) ?>
+                        </div>
+                    </div>
+
+                    <div class="card-soft">
+                        <div class="card-title">Poids actuel</div>
+                        <div class="card-desc">Dernière mesure</div>
+                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 0.25rem;">
+                            <?= esc($poidsValue) ?><?= $poidsValue !== '--' ? ' kg' : '' ?>
+                        </div>
+                    </div>
+
+                    <div class="card-soft">
+                        <div class="card-title">Porte-monnaie</div>
+                        <div class="card-desc">Crédit disponible</div>
+                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 0.25rem;">
+                            <?= esc($soldeValue) ?> Ar
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Accès rapides</h3>
+                <div class="cards-grid">
+                    <a class="card-soft" href="/profil" style="text-decoration:none; color: inherit; display:block;">
+                        <div class="card-title">Mon Profil</div>
+                        <div class="card-desc">Compléter les infos</div>
                     </a>
 
-                    <a class="action" href="/objectif">
-                        <span>
-                            <p class="title">Mes Objectifs</p>
-                            <p class="desc">Définir mon plan</p>
-                        </span>
+                    <a class="card-soft" href="/objectif" style="text-decoration:none; color: inherit; display:block;">
+                        <div class="card-title">Mes Objectifs</div>
+                        <div class="card-desc">Définir mon plan</div>
                     </a>
 
-                    <a class="action" href="/porte-monnaie">
-                        <span>
-                            <p class="title">Porte-monnaie</p>
-                            <p class="desc">Recharger mon compte</p>
-                        </span>
+                    <a class="card-soft" href="/porte-monnaie" style="text-decoration:none; color: inherit; display:block;">
+                        <div class="card-title">Porte-monnaie</div>
+                        <div class="card-desc">Recharger mon compte</div>
                     </a>
 
-                    <a class="cta" href="/gold">
-                        <span>
-                            <p class="cta-title">Passer Gold</p>
-                            <p class="cta-sub">-15% sur tout</p>
-                        </span>
-                        <span style="font-weight:800;">›</span>
+                    <a class="card-soft" href="/gold" style="text-decoration:none; color: inherit; display:block;">
+                        <div class="card-title">Passer Gold</div>
+                        <div class="card-desc">-15% sur tout</div>
                     </a>
                 </div>
 
