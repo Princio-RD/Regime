@@ -493,8 +493,15 @@ class UserController extends BaseController
             return redirect()->to('/');
         }
 
-        // Chargement Dompdf depuis une librairie externe locale (sans Composer)
-        // Dompdf n'embarque pas toujours "autoload.inc.php" : il provient du projet dompdf/utils.
+        // Utiliser Dompdf via Composer pour charger toutes les classes (incluant Dompdf\Cpdf)
+        if (!class_exists('Dompdf\\Dompdf')) {
+            $composerAutoload = ROOTPATH . 'vendor/autoload.php';
+            if (is_file($composerAutoload)) {
+                require_once $composerAutoload;
+            }
+        }
+
+        // Fallback optionnel: Dompdf local (app/ThirdParty) + dompdf/utils autoload.inc.php
         if (!class_exists('Dompdf\\Dompdf')) {
             $dompdfAutoload = APPPATH . 'ThirdParty/dompdf-utils/autoload.inc.php';
             if (is_file($dompdfAutoload)) {
@@ -502,11 +509,10 @@ class UserController extends BaseController
             }
         }
 
-        // Dompdf est requis (composer require dompdf/dompdf) ou via app/ThirdParty/dompdf + app/ThirdParty/dompdf-utils
         if (!class_exists('Dompdf\\Dompdf')) {
             return $this->response
                 ->setStatusCode(500)
-                ->setBody("Export PDF indisponible : la librairie Dompdf n'est pas installée. Installez-la avec Composer (dompdf/dompdf) ou placez Dompdf dans app/ThirdParty/dompdf et l'autoloader (dompdf/utils) dans app/ThirdParty/dompdf-utils/autoload.inc.php.");
+                ->setBody("Export PDF indisponible : Dompdf n'est pas chargé. Installez-le via Composer (dompdf/dompdf) ou configurez app/ThirdParty/dompdf + app/ThirdParty/dompdf-utils.");
         }
 
         $regimeModel = new RegimeModel();
