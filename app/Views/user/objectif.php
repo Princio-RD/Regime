@@ -14,25 +14,44 @@
                 <div class="topbar">
                     <div class="welcome">
                         <h1>Choisir votre objectif</h1>
-                        <p>Sélectionnez l'objectif qui correspond à votre parcours</p>
+                        <p class="muted">Dites-nous ce que vous voulez atteindre, on vous proposera les régimes adaptés.</p>
                     </div>
-                    <a class="logout" href="/logout">Déconnexion</a>
+                    <div class="topbar-actions">
+                        <a class="btn btn-ghost" href="/Accueil">Tableau de bord</a>
+                        <a class="logout" href="/logout">Déconnexion</a>
+                    </div>
                 </div>
 
                 <?php if (isset($objectifs) && !empty($objectifs)): ?>
-                    <div class="objectif-list">
+                    <div class="goal-grid">
                         <?php foreach($objectifs as $obj): ?>
-                            <a class="objectif-item" href="/objectifs/<?= esc($obj['id']) ?>">
-                                <h3><?= esc($obj['nom']) ?></h3>
-                                <?php if (!empty($obj['description'])): ?>
-                                    <p><?= esc($obj['description']) ?></p>
-                                <?php endif; ?>
+                            <?php
+                                $oid = (int)($obj['id'] ?? 0);
+                                $icon = '🎯';
+                                if ($oid === 1) $icon = '📈';
+                                if ($oid === 2) $icon = '📉';
+                                if ($oid === 3) $icon = '⚖️';
+                            ?>
+                            <a class="goal-card" href="/objectifs/<?= esc($obj['id']) ?>">
+                                <div class="goal-icon" aria-hidden="true"><?= $icon ?></div>
+                                <div class="goal-body">
+                                    <h3><?= esc($obj['nom']) ?></h3>
+                                    <?php if (!empty($obj['description'])): ?>
+                                        <p class="muted"><?= esc($obj['description']) ?></p>
+                                    <?php else: ?>
+                                        <p class="muted">Voir les régimes recommandés pour cet objectif.</p>
+                                    <?php endif; ?>
+                                    <div class="goal-cta">
+                                        <span>Choisir cet objectif</span>
+                                        <span aria-hidden="true">→</span>
+                                    </div>
+                                </div>
                             </a>
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
                     <div class="card text-center mt-4">
-                        <p>Aucun objectif disponible pour le moment.</p>
+                        <p class="muted">Aucun objectif disponible pour le moment.</p>
                     </div>
                 <?php endif; ?>
 

@@ -28,6 +28,10 @@ $routes->get('gold', 'User\UserController::buyGold');
 $routes->post('souscrire-regime', 'User\UserController::souscrireRegime');
 
 
+// Export PDF d'un régime
+$routes->get('regimes/(:num)/export-pdf', 'User\UserController::exportRegimePdf/$1');
+
+
 $routes->get('/viewLoginAdmin', 'Admin\AdminController::viewLoginAdmin');
 $routes->post('/doLoginAdmin', 'Admin\AdminController::doLoginAdmin');
 

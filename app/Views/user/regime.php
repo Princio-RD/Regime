@@ -74,6 +74,10 @@
                                         Choisir ce programme
                                     </button>
                                 </form>
+
+                                <div style="margin-top: 10px;">
+                                    <a href="/regimes/<?= esc($regime['id']) ?>/export-pdf" class="btn btn-block">Exporter en PDF</a>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
