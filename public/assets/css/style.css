@@ -3,49 +3,49 @@
    ======================================== */
 
 :root {
-    /* Palette de couleurs principale */
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
-    
-    --secondary: #10b981;
-    --secondary-dark: #059669;
-    
-    --accent: #f59e0b;
-    --accent-dark: #d97706;
-    
+    /* --- Thème "Green Health" --- */
+    --primary: #2f6f4e;          /* vert principal */
+    --primary-dark: #24573d;
+    --primary-light: #4b8a67;
+
+    --secondary: #9dbb6c;        /* vert clair / olive */
+    --secondary-dark: #7d9e4c;
+
+    --accent: #f2b24a;           /* doré doux */
+    --accent-dark: #d99224;
+
     /* Couleurs neutres */
-    --bg: #f8fafc;
+    --bg: #f6f8f5;
     --surface: #ffffff;
-    --surface-alt: #f1f5f9;
-    
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --text-muted: #94a3b8;
-    
-    --border: #e2e8f0;
-    --border-focus: #6366f1;
-    
+    --surface-alt: #f2f5f2;
+
+    --text-primary: #102a1d;
+    --text-secondary: #3f5a4b;
+    --text-muted: #6e8577;
+
+    --border: rgba(16, 42, 29, 0.10);
+    --border-focus: var(--primary);
+
     /* Couleurs d'état */
-    --success: #10b981;
-    --warning: #f59e0b;
+    --success: #2f6f4e;
+    --warning: #f2b24a;
     --error: #ef4444;
     --info: #3b82f6;
-    
-    /* Ombres */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    
+
+    /* Ombres plus "soft" */
+    --shadow-sm: 0 1px 0 rgba(16, 42, 29, 0.04);
+    --shadow-md: 0 10px 25px rgba(16, 42, 29, 0.08);
+    --shadow-lg: 0 18px 45px rgba(16, 42, 29, 0.10);
+    --shadow-xl: 0 28px 70px rgba(16, 42, 29, 0.14);
+
     /* Border radius */
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
-    
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+    --radius-xl: 26px;
+
     /* Transitions */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset & Base */
@@ -62,7 +62,10 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(47, 111, 78, 0.10), transparent 60%),
+        radial-gradient(900px 500px at 95% 10%, rgba(157, 187, 108, 0.16), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, #eef2ee 100%);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
@@ -71,7 +74,7 @@ body {
 /* Layout */
 .page {
     min-height: 100vh;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
 .shell {
@@ -87,22 +90,26 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: var(--surface);
-    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .welcome h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     color: var(--text-primary);
     margin-bottom: 0.25rem;
 }
 
 .welcome h1 span {
     color: var(--primary);
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(135deg, var(--primary), var(--secondary-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -113,31 +120,16 @@ body {
     font-size: 0.95rem;
 }
 
-.logout {
-    padding: 0.5rem 1.25rem;
-    background: var(--error);
-    color: white;
-    text-decoration: none;
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-}
-
-.logout:hover {
-    background: #dc2626;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
-
 /* Hero Section */
 .hero {
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.86);
     border-radius: var(--radius-xl);
     padding: 2.5rem;
     box-shadow: var(--shadow-lg);
     margin-bottom: 2rem;
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 /* KPIs */
@@ -243,46 +235,41 @@ body {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 0.75rem 2rem;
-    background: var(--primary);
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
-    border: none;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.98rem;
     cursor: pointer;
     transition: var(--transition);
     text-decoration: none;
     text-align: center;
+    box-shadow: 0 12px 28px rgba(47, 111, 78, 0.22);
 }
 
 .btn:hover {
-    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 16px 35px rgba(47, 111, 78, 0.28);
 }
 
 .btn:active {
     transform: translateY(0);
 }
 
-.btn-block {
+.btn.btn-block {
     width: 100%;
-    display: block;
 }
 
 /* Links */
 .link {
-    display: inline-block;
     color: var(--primary);
     text-decoration: none;
-    font-weight: 500;
-    margin: 0.5rem 0;
-    transition: var(--transition);
+    font-weight: 700;
 }
 
 .link:hover {
-    color: var(--primary-dark);
     text-decoration: underline;
 }
 
@@ -416,98 +403,60 @@ body {
 /* Regime Cards */
 .regime-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
 }
 
 .regime-card {
-    background: var(--surface);
-    border-radius: var(--radius-lg);
-    padding: 1.75rem;
-    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: 1.6rem;
     transition: var(--transition);
-    display: flex;
-    flex-direction: column;
 }
 
 .regime-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--primary);
 }
 
 .regime-card h3 {
-    color: var(--primary);
-    margin-bottom: 0.75rem;
     font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
 }
 
 .regime-card p {
     color: var(--text-secondary);
-    margin-bottom: 1rem;
-    flex-grow: 1;
 }
 
 .composition {
+    margin-top: 0.9rem;
     background: var(--surface-alt);
-    padding: 1rem;
-    border-radius: var(--radius-md);
-    margin: 1rem 0;
-    font-size: 0.9rem;
-}
-
-.composition strong {
-    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 0.9rem 1rem;
 }
 
 .price-tag {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: var(--success);
-    margin: 1rem 0;
+    margin-top: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.05rem;
 }
 
 .price-old {
     color: var(--text-muted);
     text-decoration: line-through;
-    font-size: 0.9rem;
     margin-right: 0.5rem;
 }
 
 .meta {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-.sports-box {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px dashed var(--border);
-}
-
-.sports-box h4 {
-    margin: 0 0 0.5rem 0;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
-.sports-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-.sports-box li {
-    margin-bottom: 0.25rem;
+    margin-top: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
 }
 
 /* Objectifs */
