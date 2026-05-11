@@ -144,4 +144,12 @@ class Toolbar extends BaseConfig
         'HX-Request'       => 'true',           // HTMX requests
         'X-Up-Version'     => null,             // Unpoly partial requests
     ];
+
+    /**
+     * Désactiver la Toolbar sur certaines routes
+     * Utile pour les fichiers binaires (PDF, etc.)
+     */
+    public array $disabledRoutes = [
+        'regimes/*/export-pdf',
+    ];
 }

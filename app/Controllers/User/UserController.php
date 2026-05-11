@@ -543,7 +543,14 @@ class UserController extends BaseController
 
         $filename = 'regime_' . ($regime['id'] ?? $regimeId) . '.pdf';
 
-       
+        // Désactiver la Debug Toolbar pour éviter l'injection de code/JSON dans le PDF
+        if (function_exists('service')) {
+            $debugbar = service('debugbar', false);
+            if ($debugbar) {
+                $debugbar->disable();
+            }
+        }
+
         return $this->response
             ->setHeader('Content-Type', 'application/pdf')
             ->setHeader('X-Content-Type-Options', 'nosniff')
